@@ -1,0 +1,680 @@
+{
+	"info": {
+		"_postman_id": "b64b5177-42f8-4148-8f60-773ccf08ce22",
+		"name": "Carapp",
+		"description": "carapp API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "http://localhost:3000/users/13",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtvYWxhQGdtYWlsLmNvbSIsIm5hbWUiOiJwaW5ndSIsInVzZXJJZCI6MTEsInJhdGluZyI6NSwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNTk1MTk1ODM0LCJleHAiOjE1OTUzNjg2MzR9.62PMqGS-loLm0qSGEuLCnBzwWh0Z124pF03U9RB5mqg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\"propName\":\"user_name\",\"value\":\"Elton omwega\"},\r\n        {\"propName\":\"email\",\"value\":\"elton.ombogi@strathmore.edu\"}\r\n  ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/users/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"users",
+								"13"
+							]
+						},
+						"description": "updating a user info as admin "
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtvYWxhQGdtYWlsLmNvbSIsIm5hbWUiOiJwaW5ndSIsInVzZXJJZCI6MTEsInJhdGluZyI6NSwiaWF0IjoxNTk1MTY4OTAyLCJleHAiOjE1OTUxNzI1MDJ9.nrlbEYeY_EZ0n6RCb9DOH9nPukosUd8dvOoeMBjXYbs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "mason",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Kiambu",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mason@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userImg",
+									"type": "file",
+									"src": "/C:/Users/Elton psycho/Pictures/Screenshots/Screenshot (23).png"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/users/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"users",
+								"11"
+							]
+						},
+						"description": "getting a specific user"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtvYWxhQGdtYWlsLmNvbSIsIm5hbWUiOiJwaW5ndSIsInVzZXJJZCI6MTEsImlhdCI6MTU5NTE5NTQzNywiZXhwIjoxNTk1MzY4MjM3fQ.HWhj-dDMZG2cKd-1FwCuh6CZh1BT-UOeiJIrg9S50fE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Elton Omwega\",\r\n    \"year\":\"2\",\r\n    \"email\":\"elton.ombogi@strathmore.edu\",\r\n    \"address\":\"Nairobi 2543\",\r\n    \"course\":\"ICS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						},
+						"description": "retrieving all users as a logged in user"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/11",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtvYWxhQGdtYWlsLmNvbSIsIm5hbWUiOiJwaW5ndSIsInVzZXJJZCI6MTEsInJhdGluZyI6NSwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNTk1MTk1ODM0LCJleHAiOjE1OTUzNjg2MzR9.62PMqGS-loLm0qSGEuLCnBzwWh0Z124pF03U9RB5mqg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/users/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "Jeff",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Nyeri",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jeff@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userImg",
+									"type": "file",
+									"src": "/C:/Users/Elton psycho/Pictures/Screenshots/Screenshot (30).png"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"users",
+								"signup"
+							]
+						},
+						"description": "user signup endpoint"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"elton.ombogi@strathmore.edu\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						},
+						"description": "login to carapp"
+					},
+					"response": []
+				}
+			],
+			"description": "user endpoints",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "http://localhost:3000/car/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "carName",
+									"value": "BMW",
+									"type": "text"
+								},
+								{
+									"key": "noPlate",
+									"value": "KCD 365D",
+									"type": "text"
+								},
+								{
+									"key": "mileage",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Red, fast and new",
+									"type": "text"
+								},
+								{
+									"key": "carImg",
+									"type": "file",
+									"src": "/C:/Users/Elton psycho/Pictures/Screenshots/Screenshot (7).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/car/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"car",
+								""
+							]
+						},
+						"description": "creating a car as an authenticated user"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/carImg/1595237184596Screenshot (7).png",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carImg/1595237184596Screenshot (7).png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carImg",
+								"1595237184596Screenshot (7).png"
+							]
+						},
+						"description": "retrieving car image"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/car/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/car/myCars/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"myCars",
+								""
+							]
+						},
+						"description": "getting a desired quantity of cars from the database"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/car/5",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\"propName\":\"description\",\"value\":\"yellow\"}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/car/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"car",
+								"5"
+							]
+						},
+						"description": "updating your cars properties"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/car/5",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/car/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"car",
+								"5"
+							]
+						},
+						"description": "deleting your car from the db"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "lease",
+			"item": [
+				{
+					"name": "http://localhost:3000/lease",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carId\":1,\r\n    \"rate\":1000,\r\n    \"description\":\"available on request\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/lease",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"lease"
+							]
+						},
+						"description": "leasing out your car"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/lease",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/lease",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"lease"
+							]
+						},
+						"description": "getting all available leases"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/lease/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZmZAZ21haWwuY29tIiwibmFtZSI6IkplZmYiLCJ1c2VySWQiOjE1LCJyYXRpbmciOjAsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyNDE1OTgsImV4cCI6MTU5NTQxNDM5OH0.DnxbSA5USI-51_G7eqxqTLU7VbpfiN1WCFYkrDnOHAg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\"propName\":\"rate\",\"value\":\"100\"}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/lease/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"lease",
+								"1"
+							]
+						},
+						"description": "updating a lease in the db"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/lease/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/lease/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"lease",
+								"1"
+							]
+						},
+						"description": "deleting a lease from the db"
+					},
+					"response": []
+				}
+			],
+			"description": "lease operations",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "rent",
+			"item": [
+				{
+					"name": "http://localhost:3000/rent/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsdG9uLm9tYm9naUBzdHJhdGhtb3JlLmVkdSIsIm5hbWUiOiJFbHRvbiBvbXdlZ2EiLCJ1c2VySWQiOjEzLCJyYXRpbmciOjUsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE1OTUyMzY0MjksImV4cCI6MTU5NTQwOTIyOX0.8ri3ofotsk0XyqbZ1QZQ_DKo-gm9BMU4AbDoZcryTgI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carId\":1,\r\n    \"durationHours\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carapp/api/v1/rent/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carapp",
+								"api",
+								"v1",
+								"rent",
+								""
+							]
+						},
+						"description": "posting a rent record"
+					},
+					"response": []
+				}
+			],
+			"description": "rent endpoints",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
