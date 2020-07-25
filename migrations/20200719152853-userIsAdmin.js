@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -8,10 +8,11 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.addColumn('users', 'isAdmin',
-    { type: Sequelize.BOOLEAN,
+    await queryInterface.addColumn("users", "isAdmin", {
+      type: Sequelize.BOOLEAN,
       defaultValue: false,
-    allowNull:false });
+      allowNull: false,
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -21,5 +22,5 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-  }
+  },
 };
