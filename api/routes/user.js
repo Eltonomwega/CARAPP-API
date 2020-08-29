@@ -115,6 +115,7 @@ router.post('/login',(req,res,next)=>{
                         console.log(user);
                         return res.status(200).json({
                             message:'Auth was successful',
+                            userName:user.user_name,
                             token: token
                         });
                     }
